@@ -9,43 +9,136 @@ html {
 }
 
 body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+#container {
   width: 960px;
+  margin: auto;
+}
+
+#jumbotronDiv {
+  height: 500px;
+  background-image: url("assets/barCade1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  z-index: -1;
+}
+
+.navBar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to right,
+    rgb(123, 17, 216),
+    rgb(178, 134, 216)
+  );
+  align-items: center;
+  padding: 0px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+a {
+  outline: 0;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.navBar > a > button {
+  background-color: rgba(138, 216, 69);
+  height: 29px;
+  width: 115px;
+  border: 3px solid rgb(115, 0, 216);
+  border-radius: 10px;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px grey;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.socialMedia button {
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+  margin: 5px;
+  font-size: 0px;
+  background-color: rgb(138, 216, 69);
+  box-shadow: 3px 4px rgba(138, 216, 69);
+}
+
+/* for Logo */
+#jumbotronDiv > div > img {
+  position: absolute;
+  bottom: 120px;
+  left: 380px;
+}
+
+#reservations {
+  position: absolute;
+  bottom: 30px;
+  left: 385px;
+  background-color: rgb(163, 216, 117);
+  height: 29px;
+  width: 190px;
+  border: 3px solid rgb(115, 0, 216);
+  border-radius: 10px;
+  color: rgb(115, 0, 216);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+#menuDiv {
+  height: 400px;
+  border: 1px solid black;
+}
+
+#photosDiv {
+  height: 400px;
+  border: 1px solid black;
+}
+
+#footerDiv {
+  height: 400px;
+  border: 1px solid black;
 }
 
 .aboutUsimg {
-  height: 198px;
+  height: 300px;
   width: 300px;
-  position: relative;
-  left: 658px;
-  top: -249px;
+  margin: 40px 10px;
 }
 
 h5,
 h6 {
-  position: relative;
-  top: -20px;
   font-size: 16px;
   left: 10px;
+  padding-left: 20px;
 }
 
 .aboutuscaption {
-  position: relative;
   width: 600px;
-  top: -40px;
-  left: 10px;
+  padding-left: 20px;
 }
 
 #aboutUsDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background: rgb(123, 17, 216);
-  position: relative;
   opacity: 0.9;
-  width: 100%;
-  height: 200px;
+  height: 400px;
   font-size: 20px;
   text-align: left;
-  border: 1px solid rgb(110, 216, 17);
-  margin: 5px;
-  padding: 0;
+  z-index: -2;
 }
 
 /* rgb(123, 17, 216)
