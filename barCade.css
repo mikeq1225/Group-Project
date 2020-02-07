@@ -97,9 +97,40 @@ button {
   letter-spacing: 2px;
 }
 
+/* Syling for Menu Section */
 #menuDiv {
   height: 400px;
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#menuDiv button {
+  padding: 0px;
+}
+
+.foodItems {
+  width: 250px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.foodItems div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 860px;
+  border: 1px solid black;
+}
+
+.foodItems img {
+  width: 250px;
+  height: 250px;
 }
 
 #photosDiv {
