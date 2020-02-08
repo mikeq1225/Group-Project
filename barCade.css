@@ -99,7 +99,7 @@ button {
 
 /* Syling for Menu Section */
 #menuDiv {
-  height: 400px;
+  height: 600px;
   border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -111,21 +111,18 @@ button {
   padding: 0px;
 }
 
+.itemNPD {
+  position: absolute;
+  width: 860px;
+  border: 1px solid black;
+}
+
 .foodItems {
   width: 250px;
   height: 250px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
-}
-
-.foodItems div {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 860px;
-  border: 1px solid black;
 }
 
 .foodItems img {
