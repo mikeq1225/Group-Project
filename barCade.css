@@ -196,6 +196,60 @@ h6 {
   grid-row-end: 1;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.img1 {
+  height: 200px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(138, 216, 69);
+}
+
+.img2 {
+  height: 200px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(138, 216, 69);
+}
+
+.img3 {
+  height: 200px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(138, 216, 69);
+}
+
+.img4 {
+  height: 200px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(138, 216, 69);
+}
+
+.img5 {
+  height: 200px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(138, 216, 69);
+}
+
+.img6 {
+  height: 200px;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(138, 216, 69);
+}
+
 /* rgb(123, 17, 216)
 
 rgb(110, 216, 17) */
