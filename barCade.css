@@ -43,7 +43,7 @@ body {
   z-index: 1;
 }
 
-a {
+.navBar a {
   outline: 0;
   cursor: pointer;
   transition: 2s;
@@ -99,36 +99,84 @@ button {
 
 /* Syling for Menu Section */
 #menuDiv {
-  height: 600px;
-  border: 1px solid black;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+  background-color: rgb(177, 216, 142);
 }
 
-#menuDiv button {
-  padding: 0px;
+#menuButton {
+  padding: 25px;
+  background-color: rgb(177, 216, 142);
+  border: 0;
+}
+
+.foodPics {
+  width: 250px;
+  height: 250px;
+}
+
+/* Styling for menu slider */
+
+.menu {
+  grid-area: 2/1/2/4;
+  background-color: rgb(177, 216, 142);
+}
+
+.appInfoShow,
+.dessertInfoShow,
+.entreeInfoShow {
+  border: 10px solid gray;
+}
+
+.hide {
+  height: 0;
+  display: none;
 }
 
 .itemNPD {
-  position: absolute;
-  width: 860px;
+  width: 100%;
   border: 1px solid black;
+  line-height: 10px;
+  word-spacing: 2px;
+  background-color: rgb(177, 216, 142);
+  text-align: center;
+  border: 1px solid gray;
 }
 
-.foodItems {
-  width: 250px;
-  height: 250px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+.name {
+  font-size: 22px;
+  margin: 5px 20px;
 }
 
-.foodItems img {
-  width: 250px;
-  height: 250px;
+.description {
+  font-size: 13px;
+  letter-spacing: 1.5px;
 }
+
+.price {
+  color: rgb(115, 0, 216);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  margin: 10px 0px 0px 0px;
+}
+
+.foodIcon {
+  width: 15px;
+  height: 15px;
+  margin: 3px 8px;
+}
+
+/* Styling for Photos div */
 
 #photosDiv {
   height: 400px;
