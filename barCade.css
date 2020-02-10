@@ -53,7 +53,7 @@ body {
 .navBar a {
   outline: 0;
   cursor: pointer;
-  transition: 2s;
+  transition: href 2s;
 }
 
 .navBar > a > button {
@@ -100,6 +100,8 @@ button {
   background-color: rgb(163, 216, 117);
   border: 3px solid rgb(115, 0, 216);
   border-radius: 10px;
+  transition: all 0.3s;
+  transition: height 0.3s;
 }
 
 h4 {
@@ -121,7 +123,6 @@ button.revs {
 
 #reservationsButton:hover {
   height: auto;
-  transition: 1s;
 }
 
 .revs {
@@ -207,9 +208,17 @@ h2 {
   letter-spacing: 2px;
 }
 
-.border {
+#appetizer,
+#entree,
+#dessert,
+#specials {
   border-left: 10px solid gray;
   border-right: 10px solid gray;
+}
+
+.show {
+  height: auto;
+  transition: height 1s;
 }
 
 .hide {
@@ -217,6 +226,18 @@ h2 {
   display: none;
   transition-timing-function: ease-in-out;
   transition: height 1s;
+}
+
+#specials {
+  height: auto;
+}
+
+#specials p {
+  font-size: 25px;
+  text-align: center;
+  color: rgb(115, 0, 216);
+  padding: 10px;
+  margin: 0;
 }
 
 .itemNPD {
