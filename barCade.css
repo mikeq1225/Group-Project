@@ -11,11 +11,17 @@ html {
 body {
   font-family: sans-serif;
   margin: 0;
+  background-image: url("Assets/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 #container {
   width: 960px;
   margin: auto;
+  border: 5px solid rgba(138, 216, 69);
+  border-radius: 25px;
 }
 
 #jumbotronDiv {
@@ -24,7 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .navBar {
@@ -41,6 +47,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
+  border-radius: 17px;
 }
 
 .navBar a {
@@ -83,18 +90,53 @@ button {
   left: 380px;
 }
 
-#reservations {
+/* Styling for reservation button */
+#reservationsButton {
   position: absolute;
-  bottom: 30px;
-  left: 385px;
+  bottom: 40px;
+  left: 330px;
+  height: 60px;
+  overflow: hidden;
   background-color: rgb(163, 216, 117);
-  height: 29px;
-  width: 190px;
   border: 3px solid rgb(115, 0, 216);
   border-radius: 10px;
+}
+
+h4 {
+  text-align: center;
+  margin: 16px 10px;
+}
+
+.revsDiv {
   color: rgb(115, 0, 216);
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 2px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+button.revs {
+  color: rgb(115, 0, 216);
+}
+
+#reservationsButton:hover {
+  height: auto;
+  transition: 1s;
+}
+
+.revs {
+  width: 250px;
+  outline: none;
+  font-size: 20px;
+  background-color: rgb(196, 216, 178);
+  border: 1px solid rgb(115, 0, 216);
+  border-radius: 7px;
+  margin: 10px 15px;
+}
+
+.revs::placeholder {
+  color: rgb(115, 0, 216);
+  padding-left: 15px;
 }
 
 /* Syling for Menu Section */
@@ -107,15 +149,44 @@ button {
   background-color: rgb(177, 216, 142);
 }
 
-#menuButton {
-  padding: 25px;
-  background-color: rgb(177, 216, 142);
-  border: 0;
+#menuButton1,
+#menuButton2,
+#menuButton3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  height: 250px;
+  width: 275px;
+  border-radius: 25px;
+  color: white;
+  text-shadow: 8px 8px 8px rgb(115, 0, 216);
 }
 
-.foodPics {
-  width: 250px;
-  height: 250px;
+#menuDiv a {
+  text-decoration: none;
+  font-size: 50px;
+  text-align: center;
+}
+
+#menuButton1 {
+  background-image: url("Assets/Nachos.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin: 20px -10px 20px 0px;
+}
+
+#menuButton2 {
+  background-image: url("Assets/Fish-n-Chips.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin: 20px 0px;
+}
+
+#menuButton3 {
+  background-image: url("Assets/Cheesecake.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin: 20px 0px 20px -10px;
 }
 
 /* Styling for menu slider */
@@ -123,22 +194,33 @@ button {
 .menu {
   grid-area: 2/1/2/4;
   background-color: rgb(177, 216, 142);
+  width: 100%;
+  border-top: 10px solid gray;
+  border-bottom: 10px solid gray;
 }
 
-.appInfoShow,
-.dessertInfoShow,
-.entreeInfoShow {
-  border: 10px solid gray;
+h2 {
+  text-align: center;
+  margin: 0px;
+  padding: 10px 0px;
+  border-bottom: 5px solid gray;
+  letter-spacing: 2px;
+}
+
+.border {
+  border-left: 10px solid gray;
+  border-right: 10px solid gray;
 }
 
 .hide {
   height: 0;
   display: none;
+  transition-timing-function: ease-in-out;
+  transition: height 1s;
 }
 
 .itemNPD {
   width: 100%;
-  border: 1px solid black;
   line-height: 10px;
   word-spacing: 2px;
   background-color: rgb(177, 216, 142);
@@ -176,19 +258,25 @@ button {
   margin: 3px 8px;
 }
 
+.foodIconHover {
+  background-color: red;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+
 /* Styling for Photos div */
 
 #photosDiv {
   height: 400px;
-  border: 1px solid black;
 }
 
 #footerDiv {
   height: 400px;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background: rgb(160, 50, 255);
+  border-radius: 0px 0px 25px 25px;
 }
 
 .aboutUsimg {
@@ -213,7 +301,6 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: rgb(123, 17, 216);
-  opacity: 0.9;
   height: 400px;
   font-size: 20px;
   text-align: left;
@@ -226,12 +313,14 @@ h6 {
   border: 1px solid rgb(138, 216, 69);
   grid-row-start: 1;
   grid-row-end: 1;
+  border-radius: 0px 0px 19px 0px;
 }
 
 .findUs {
   font-size: 20px;
   line-height: 50px;
-  border: 1px solid rgb(138, 216, 69);
+
+  border-radius: 0px 0px 0px 19px;
   grid-row-start: 1;
   grid-row-end: 1;
 }
@@ -268,7 +357,7 @@ h6 {
 
 .img3 {
   height: 200px;
-  width: 320px;
+  width: 311px;
   margin: 0;
   padding: 0;
   border: 1px solid rgb(138, 216, 69);
@@ -292,7 +381,7 @@ h6 {
 
 .img6 {
   height: 200px;
-  width: 320px;
+  width: 311px;
   margin: 0;
   padding: 0;
   border: 1px solid rgb(138, 216, 69);

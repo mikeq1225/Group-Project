@@ -1,9 +1,8 @@
 $(document).ready(function() {
   $.get("https://obscure-tundra-54269.herokuapp.com/bar-food", function(data) {
-    var apps = data.appetizers
-      .map(function(item) {
-        return `
-        <div id="appetizer" class="itemNPD">
+    var apps = data.appetizers.map(function(item) {
+      return `
+        <div  class="itemNPD">
           <div class="iconContainer">
             <img class="foodIcon" src="Assets/Spicy.png">
             <img class="foodIcon" src="Assets/Allergy.png">
@@ -14,16 +13,10 @@ $(document).ready(function() {
           <p class="description">${item.description}</p>
           <p class="price">${item.price}</p>
         </div>`
-      })
-      .join("")
-    $(".appInfoShow").html(apps)
-  })
-
-  $.get("https://obscure-tundra-54269.herokuapp.com/bar-food", function(data2) {
-    var entree = data2.entrees
-      .map(function(item) {
-        return `
-        <div id="entree" class="itemNPD">
+    })
+    var entree = data.entrees.map(function(item) {
+      return `
+        <div  class="itemNPD">
           <div class="iconContainer">
             <img class="foodIcon" src="Assets/Spicy.png">
             <img class="foodIcon" src="Assets/Allergy.png">
@@ -34,16 +27,11 @@ $(document).ready(function() {
           <p class="description">${item.description}</p>
           <p class="price">${item.price}</p>
         </div>`
-      })
-      .join("")
-    $(".entreeInfoShow").html(entree)
-  })
-
-  $.get("https://obscure-tundra-54269.herokuapp.com/bar-food", function(data3) {
-    var dessert = data3.desserts
+    })
+    var dessert = data.desserts
       .map(function(item) {
         return `
-        <div id="dessert" class="itemNPD">
+        <div class="itemNPD">
           <div class="iconContainer">
             <img class="foodIcon" src="Assets/Spicy.png">
             <img class="foodIcon" src="Assets/Allergy.png">
@@ -57,14 +45,19 @@ $(document).ready(function() {
       })
       .join("")
     $(".dessertInfoShow").html(dessert)
+    $(".entreeInfoShow").html(entree)
+    $(".appInfoShow").html(apps)
+    $("#menuDiv").on("click", "a", function(e) {
+      e.preventDefault()
+      $(".menu").addClass("border")
+      $("#appetizer").addClass("hide")
+      $("#entree").addClass("hide")
+      $("#dessert").addClass("hide")
+      var href = $(this).attr("href")
+      $(href).toggleClass("hide")
+    })
+    $("img.foodIcon").hover(function() {
+      $(this).toggleClass("foodIconHover")
+    })
   })
-
-  // $("#menuButton").on("click", "a", function(e) {
-  //   e.preventDefault()
-  //   $("#menubutton")
-  //     .find(".hide")
-  //     .addClass("itemNPD")
-  //   var href = $(this).attr("href")
-  //   $(href).addClass("itemNPD")
-  // })
 })

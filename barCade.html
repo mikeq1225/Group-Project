@@ -76,8 +76,15 @@
         <div>
           <img src="assets/BarCade Logo.png" />
         </div>
-        <div>
-          <button id="reservations">For Reservations</button>
+        <div id="reservationsButton">
+          <div class="revsDiv" >
+            <h4>For Reservations</h4>
+            <input class="revs" type="text" id="fname" name="fname" placeholder="First Name"/>
+            <input class="revs" type="text" id="lname" name="lname" placeholder="Last Name"/>
+            <input class="revs" type="tel" id="phone" name="phone" placeholder="Phone Number"/>
+            <input class="revs" type="email" id="email" name="email" placeholder="Email"/>
+            <button class="revs" type="submit">Submit</button>
+          </div>
         </div>
       </div>
       <div id="aboutUsDiv">
@@ -94,21 +101,27 @@
         <img class="aboutUsimg" src="Assets/AboutUs-image.jpg" />
       </div>
       <div id="menuDiv">
-        <div id="menuButton">
-          <a href="#appetizer"><img class="foodPics" src="Assets/Nachos.jpg"></img></a>
-        </div>
-        <div id="menuButton">
-          <a href="#entree"><img class="foodPics" src="Assets/Fish-n-Chips.jpg"></img></a>
-        </div>
-        <div id="menuButton">
-          <a href="#dessert"><img class="foodPics" src="Assets/Cheesecake.jpg"></img></a>
-        </div>
+        <a href="#appetizer"><div id="menuButton1">Appetizers
+        </div></a>
+        <a href="#entree"><div id="menuButton2">Entrees
+        </div></a>
+        <a href="#dessert"><div id="menuButton3">Desserts
+        </div></a>
         <div class="menu">
-          <div class="appInfoShow">
+          <div id="appetizer" class="hide">
+            <h2>Appetizers</h2>
+            <div class="appInfoShow">
+            </div>
           </div>
-          <div class="entreeInfoShow">
+          <div id="entree" class="hide">
+            <h2>Entrees</h2>
+            <div class="entreeInfoShow">
+            </div>
           </div>
-          <div class="dessertInfoShow">
+          <div id="dessert" class="hide">
+            <h2>Desserts</h2>
+            <div class="dessertInfoShow">
+            </div>
           </div>
         </div>
       </div>
