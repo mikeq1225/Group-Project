@@ -49,10 +49,8 @@ $(document).ready(function() {
     $(".appInfoShow").html(apps)
     $("#menuDiv").on("click", "a", function(e) {
       e.preventDefault()
-      $(".menu").addClass("border")
-      $("#appetizer").addClass("hide")
-      $("#entree").addClass("hide")
-      $("#dessert").addClass("hide")
+      $(".menu").removeClass("show")
+      $(".menu").removeClass("hide")
       var href = $(this).attr("href")
       $(href).toggleClass("hide")
     })
