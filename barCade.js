@@ -49,10 +49,13 @@ $(document).ready(function() {
     $(".appInfoShow").html(apps)
     $("#menuDiv").on("click", "a", function(e) {
       e.preventDefault()
-      $(".menu").removeClass("show")
-      $(".menu").removeClass("hide")
       var href = $(this).attr("href")
-      $(href).toggleClass("hide")
+      $(".menu > div")
+        .removeClass("show")
+        .addClass("hide")
+      $(href)
+        .removeClass("hide")
+        .addClass("show")
     })
     $("img.foodIcon").hover(function() {
       $(this).toggleClass("foodIconHover")
