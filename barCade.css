@@ -26,7 +26,7 @@ body {
 
 #jumbotronDiv {
 	height: 500px;
-	background-image: url("assets/barCade5.jpg");
+	background-image: url("Assets/barCade5.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: relative;
